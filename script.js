@@ -6,13 +6,13 @@ function createTemplate(obj){
         <div class="wrapper">
             <div class="box post">
                 <div class="vote">
-                    <img src="images/icon-plus.svg" class="plus">
+                    <img src="images/icon-plus.svg" class="plus" alt='image'>
                     <div class="number">${obj.comments[0].score}</div>
-                    <img src="images/icon-minus.svg" class="minus">
+                    <img src="images/icon-minus.svg" class="minus" alt='image'>
                 </div>
                 <div class="content">
                     <div class="header">
-                        <img src=${obj.comments[0].user.image.png}>
+                        <img src=${obj.comments[0].user.image.png} alt='image'>
                         <h3 class="name">${obj.comments[0].user.username}</h3>
                         <p class="time">${obj.comments[0].createdAt}</p>
                     </div>
@@ -20,7 +20,7 @@ function createTemplate(obj){
                     ${obj.comments[0].content}
                     </div>
                     <div class="action">
-                        <div class="reply"><img src="images/icon-reply.svg"> Reply</div>
+                        <div class="reply"><img src="images/icon-reply.svg" alt='image'> Reply</div>
                     </div>
                 </div>
             </div>
@@ -28,31 +28,31 @@ function createTemplate(obj){
         <div class="wrapper">
             <div class="box post">
                 <div class="vote">
-                    <img src="images/icon-plus.svg" class="plus">
+                    <img src="images/icon-plus.svg" class="plus" alt='image'>
                     <div class="number">${obj.comments[1].score}</div>
-                    <img src="images/icon-minus.svg" class="minus">
+                    <img src="images/icon-minus.svg" class="minus" alt='image'>
                 </div>
                 <div class="content">
                     <div class="header">
-                        <img src=${obj.comments[1].user.image.png}>
+                        <img src=${obj.comments[1].user.image.png} alt='image'>
                         <h3 class="name">${obj.comments[1].user.username}</h3>
                         <p class="time">${obj.comments[1].createdAt}</p>
                     </div>
                     <div class="text">${obj.comments[1].content}</div>
                     <div class="action">
-                    <div class="reply"><img src="images/icon-reply.svg"> Reply</div>
+                    <div class="reply"><img src="images/icon-reply.svg" alt='image'> Reply</div>
                     </div>
                 </div>
             </div>
             <div class="box reply-content">
             <div class="vote">
-                <img src="images/icon-plus.svg" class="plus">
+                <img src="images/icon-plus.svg" class="plus" alt='image'>
                 <div class="number">${obj.comments[1].replies[0].score}</div>
-                <img src="images/icon-minus.svg" class="minus">
+                <img src="images/icon-minus.svg" class="minus" alt='image'>
             </div>
             <div class="content">
                 <div class="header">
-                <img src=${obj.comments[1].replies[0].user.image.png}>
+                <img src=${obj.comments[1].replies[0].user.image.png} alt='image'>
                 <h3 class="name">${obj.comments[1].replies[0].user.username}</h3>
                 <p class="time">${obj.comments[1].replies[0].createdAt}</p>
                 </div>
@@ -60,19 +60,19 @@ function createTemplate(obj){
                 <span><span class="mention">@${obj.comments[1].replies[0].replyingTo}</span><p> ${obj.comments[1].replies[0].content}</p></span>
                 </div>
                 <div class="action">
-                <div class="reply"><img src="images/icon-reply.svg"> Reply</div>
+                <div class="reply"><img src="images/icon-reply.svg" alt='image'> Reply</div>
                 </div>
             </div>
             </div>
             <div class="box reply-content your">
             <div class="vote">
-                <img src="images/icon-plus.svg" class="plus">
+                <img src="images/icon-plus.svg" class="plus" alt='image'>
                 <div class="number">${obj.comments[1].replies[1].score}</div>
-                <img src="images/icon-minus.svg" class="minus">
+                <img src="images/icon-minus.svg" class="minus" alt='image'>
             </div>
             <div class="content">
                 <div class="header">
-                    <img src=${obj.comments[1].replies[1].user.image.png}>
+                    <img src=${obj.comments[1].replies[1].user.image.png} alt='image'>
                     <h3 class="name">${obj.comments[1].replies[1].user.username}</h3>
                     <span class='you'>you</span>
                     <p class="time">${obj.comments[1].replies[1].createdAt}</p>
@@ -81,14 +81,14 @@ function createTemplate(obj){
                 <span><span class="mention">@${obj.comments[1].replies[1].replyingTo}</span><p> ${obj.comments[1].replies[1].content}</p></span>
                 </div>
                 <div class="action">
-                    <div class="delete"><img src="images/icon-delete.svg"> delete</div>
-                    <div class="edit"><img src="images/icon-edit.svg" >Edit</div>
+                    <div class="delete"><img src="images/icon-delete.svg" alt='image'> delete</div>
+                    <div class="edit"><img src="images/icon-edit.svg" alt='image'>Edit</div>
                 </div>
             </div>
             </div>
         </div>
         <div class="comment">
-        <img src=${obj.currentUser.image.png}>
+        <img src=${obj.currentUser.image.png} alt='image'>
         <textarea class="text" cols="30" rows="10" placeholder="Add Comment"></textarea>
         <button class="btn add-comment">Send</button>
         </div>
@@ -139,7 +139,7 @@ function createReplyForm(item){
     const replyForm=document.createElement('div');
     replyForm.className='reply-form';
     replyForm.innerHTML=`
-          <img src="./images/avatars/image-juliusomo.png">
+          <img src="./images/avatars/image-juliusomo.png" alt='image'>
           <textarea class="text" cols="30" rows="10" placeholder='Add Reply'></textarea>
           <button class="btn add-reply">REPLY</button>
     `;
@@ -167,13 +167,13 @@ function createReplyContent(el,text,thePostName){
     replyContent.className='box reply-content your';
     replyContent.innerHTML=`
     <div class="vote">
-        <img src="images/icon-plus.svg" class="plus">
+        <img src="images/icon-plus.svg" class="plus" alt='image'>
         <div class="number">0</div>
-        <img src="images/icon-minus.svg" class="minus">
+        <img src="images/icon-minus.svg" class="minus" alt='image'>
     </div>
     <div class="content">
         <div class="header">
-            <img src="./images/avatars/image-juliusomo.png">
+            <img src="./images/avatars/image-juliusomo.png" alt='image'>
             <h3 class="name">hasan</h3>
             <span class='you'>you</span>
             <p class="time">Seconds ago</p>
@@ -182,8 +182,8 @@ function createReplyContent(el,text,thePostName){
             <span><span class="mention">@${thePostName}</span><p> ${text}</p></span>
         </div>
         <div class="action">
-            <div class="delete"><img src="images/icon-delete.svg"> delete</div>
-            <div class="edit"><img src="images/icon-edit.svg" >Edit</div>
+            <div class="delete"><img src="images/icon-delete.svg" alt='image'> delete</div>
+            <div class="edit"><img src="images/icon-edit.svg" alt='image' >Edit</div>
         </div>
     </div>
     `;
@@ -205,13 +205,13 @@ function addComment(text){
     wrapper.innerHTML=`
     <div class='box post your'>
         <div class="vote">
-            <img src="images/icon-plus.svg" class="plus">
+            <img src="images/icon-plus.svg" class="plus" alt='image'>
             <div class="number">0</div>
-            <img src="images/icon-minus.svg" class="minus">
+            <img src="images/icon-minus.svg" class="minus" alt='image'>
         </div>
         <div class="content">
             <div class="header">
-                <img src="./images/avatars/image-juliusomo.png">
+                <img src="./images/avatars/image-juliusomo.png" alt='image'>
                 <h3 class="name">hasan</h3>
                 <span class='you'>you</span>
                 <p class="time">Seconds ago</p>
@@ -220,8 +220,8 @@ function addComment(text){
                 <span><p>${text}</p></span>
             </div>
             <div class="action">
-                <div class="delete"><img src="images/icon-delete.svg"> delete</div>
-                <div class="edit"><img src="images/icon-edit.svg" >Edit</div>
+                <div class="delete"><img src="images/icon-delete.svg" alt='image'> delete</div>
+                <div class="edit"><img src="images/icon-edit.svg" alt='image'>Edit</div>
             </div>
         </div>
     </div>
