@@ -30,15 +30,15 @@ body{
 }
 .container{
     max-width: 720px;
-    margin: 3rem 0;
+    margin: 5rem 0;
     display: grid;
     grid-auto-rows: min-content;
-    gap: 20px;
+    gap: 22px;
     align-items: start;
 }
 .wrapper{
     display: grid;
-    gap: 10px;
+    gap: 22px;
 }
 .box{
     background-color: white;
