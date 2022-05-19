@@ -30,22 +30,22 @@ body{
 }
 .container{
     max-width: 720px;
-    margin: 5rem 0;
+    margin: 3rem 0;
     display: grid;
     grid-auto-rows: min-content;
-    gap: 22px;
+    gap: 20px;
     align-items: start;
 }
 .wrapper{
     display: grid;
-    gap: 22px;
+    gap: 10px;
 }
 .box{
     background-color: white;
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    gap: 2rem;
+    gap: 2rem; 
     position: relative;
     padding: 1.3rem 1.5rem;
     border-radius: 12px;
