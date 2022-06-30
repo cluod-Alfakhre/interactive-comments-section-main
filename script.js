@@ -1,4 +1,4 @@
-const mainSection=document.querySelector('section.main');
+const mainSection=document.querySelector('main.main');
 function createTemplate(obj){
     const container=document.createElement('div');
     container.className='container'
